@@ -413,6 +413,9 @@ public class GraphicalCalculatorFrame extends JFrame
         panel4.add(errorMessage);
 
         // TODO: add radio buttons to the button group
+        ops.add(subtract);
+        ops.add(add);
+        ops.add(multiply);
 
         //default to + operator
         add.setSelected(true); //remember, the button group ensures only one button is selected
