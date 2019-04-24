@@ -404,6 +404,13 @@ public class GraphicalCalculatorFrame extends JFrame
         this.setLayout(new GridLayout(2, 0));
 
         // TODO: add components to panels
+        panel1.add(operandEntry);
+        panel3.add(setOperand);
+        panel3.add(setOperator);
+        panel2.add(add);
+        panel2.add(subtract);
+        panel2.add(multiply);
+        panel4.add(errorMessage);
 
         // TODO: add radio buttons to the button group
 
