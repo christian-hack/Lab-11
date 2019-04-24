@@ -441,6 +441,13 @@ public class GraphicalCalculatorFrame extends JFrame
          */
         setOperand.addActionListener((e) -> {
         		// TODO: attempt to modify the selected region in gcPanel with the new operand value.
+        	if (gcPanel.setSelectedRegionContents(operandEntry.getText())) {
+        		gcPanel.setSelectedRegionContents(operandEntry.getText());
+        	}
+        	else {
+        		errorMessage.setText("");
+        	}
+
         	}
         );
 
