@@ -250,6 +250,25 @@ public class GraphicalCalculatorFrame extends JFrame
 			 *
 			 * Return false if the set operation cannot be done.
 			 */
+			int con = 0;
+			if (content.equals("+")|| content.equals("-")|| content.equals("*")) {
+				operators[(selectedRegion-1)/2] = content;
+			}
+			else if (selectedRegion == 0 || selectedRegion == 2 || selectedRegion == 4) {
+				try {
+				con = Integer.parseInt(content);
+				if (con < 0 || con > 9) {
+					success = false;
+				}
+				operands[selectedRegion/2] = con;
+				}
+				catch (NumberFormatException n) {
+					success = false;
+				}
+			}
+			else {
+				success = false;
+			}
 
 
 			this.repaint();
