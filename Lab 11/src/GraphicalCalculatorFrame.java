@@ -463,6 +463,31 @@ public class GraphicalCalculatorFrame extends JFrame
          */
         setOperator.addActionListener((e) -> {
     		// TODO: attempt to modify the selected region in gcPanel with the new operator value.
+        	if (add.isSelected()) {
+        		if (gcPanel.setSelectedRegionContents("+")) {
+        			gcPanel.setSelectedRegionContents("+");
+        		}
+        		else {
+        			errorMessage.setText("Failed to set operator value");
+        		}
+        	}
+        	if (subtract.isSelected() ) {
+        		if (gcPanel.setSelectedRegionContents("-")) {
+        			gcPanel.setSelectedRegionContents("-");
+        		}
+        		else {
+        			errorMessage.setText("Failed to set operator value");
+        		}
+        	}
+        	if (multiply.isSelected()) {
+        		if (gcPanel.setSelectedRegionContents("*")) {
+        			gcPanel.setSelectedRegionContents("*");
+        		}
+        		else {
+        			errorMessage.setText("Failed to set operator value");
+        		}
+        }
+
 
         }
         );
