@@ -285,7 +285,33 @@ public class GraphicalCalculatorFrame extends JFrame
 		public int evaluate()
 		{
 			// TODO: evaluate the expression. (operand0 operator0 operand1) operator1 operand2
-			return 0;
+			int total = 0;
+			if (operators[0].equals("+")) {
+				total = operands[0] + operands[1]; 
+			}
+			else if (operators[0].equals("-")) {
+				total = operands[0] - operands[1];
+			}
+			else if (operators[0].equals("*")) {
+				total = operands[0] * operands[1];
+			}
+			else {
+				return 0;
+			}
+			if (operators[1].equals("+")) {
+				total += operands[2];
+			}
+			else if (operators[1].equals("-")) {
+				total -= operands[2];
+			}
+			else if (operators[1].equals("*")) {
+				total *= operands[2];
+			}
+			else {
+				return 0;
+			}
+			return total;
+
 		}
 
 		/** DO NOT MODIFY - DOES NOTHING */
