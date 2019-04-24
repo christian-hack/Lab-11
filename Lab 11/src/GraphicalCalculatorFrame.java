@@ -421,6 +421,10 @@ public class GraphicalCalculatorFrame extends JFrame
         add.setSelected(true); //remember, the button group ensures only one button is selected
 
         // TODO: add sub-panels into panel 0
+        panel0.add(panel1);
+        panel0.add(panel3);
+        panel0.add(panel2);
+        panel0.add(panel4);
 
         // Adds all panels to frame:
         panel0.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT - 300));
